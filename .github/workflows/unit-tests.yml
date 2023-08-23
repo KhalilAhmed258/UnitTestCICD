@@ -1,0 +1,19 @@
+name: Unit Tests
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up CMake
+      uses: elgohr/setup-cmake@v1
+      with:
+        cmake-version: '3.20.5' # Set the CMake version you're using
+    - name: Build and Run Tests
+      run: |
+        cmake -S . -B build
+        cmake --build build
+        cd build
+        ctest --output-on-failure
