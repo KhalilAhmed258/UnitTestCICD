@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up CMake
-      uses: actions/setup-cmake@v2
-      with:
-        cmake-version: '3.20' # Set the CMake version you're using
+    - name: Install CMake
+      run: |
+        sudo apt-get update
+        sudo apt-get -y install cmake
     - name: Build and Run Tests
       run: |
         cmake -S . -B build
