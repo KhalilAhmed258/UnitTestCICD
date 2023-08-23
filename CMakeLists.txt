@@ -17,7 +17,7 @@ set(HEADER_FILES
 
 # Add source files to the project
 set(SOURCE_FILES
-    ${SOURCE_DIR}/main.cpp
+    ${SOURCE_DIR}/test.cpp
     #${SOURCE_DIR}/logger.cpp
 )
 
