@@ -42,10 +42,7 @@ TEST(ReverseStringTest, WhiteSpaceString) {
    EXPECT_THROW(utils::reverse("    "), std::invalid_argument);
 }
 
-int main(int argc, char** argv) {
-   ::testing::InitGoogleTest(&argc, argv);
-   return RUN_ALL_TESTS();
-}
+
 
 
 
